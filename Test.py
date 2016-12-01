@@ -31,7 +31,7 @@ class Test:
             desired_capabilities={
                 'app': app,
                 'platformName': 'iOS',
-                'platformVersion': '10.1',
+                'platformVersion': '10.0',
                 'deviceName': "iPhone Simulator",
                 "noReset": "false",
                 "automationName": "xcuitest",
