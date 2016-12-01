@@ -47,6 +47,9 @@ class Test:
     def test_open_choose_track(cls):
         cls.driver.find_element_by_xpath(cls.GRAMS_BTN_XPATH).click()
         cls.driver.find_element_by_xpath(cls.CREATE_GRAM_BTN_XPATH).click()
+        
+        cls.driver.switch_to.alert.accept()
+        
         assert cls.driver.find_element_by_xpath(cls.CHOOSE_TRACK_TITLE_XPATH).text == "CHOOSE TRACK"
         assert cls.is_element_present(cls, cls.FAVORITES_TAB_XPATH)
         assert cls.is_element_present(cls, cls.RECENT_TAB_XPATH)
