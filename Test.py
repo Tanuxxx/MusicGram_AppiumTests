@@ -40,7 +40,7 @@ class Test:
             })
 
         cls.driver.implicitly_wait(300)
-        cls.driver.switch_to.alert.accept()
+        #cls.driver.switch_to.alert.accept()
 
     @allure.feature('Create Gram')
     @allure.story('Test Choose Track')
