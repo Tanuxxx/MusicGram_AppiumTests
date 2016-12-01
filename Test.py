@@ -25,14 +25,17 @@ class Test:
     @classmethod
     def setup(cls):
         #app = os.path.abspath('./Coffee Ratio/build/Debug-iphonesimulator/Coffee Ratio.app')
-        app = os.path.abspath('./iOS-iPhone/MusicGram/Build/MusicGram.app')
+        #app = os.path.abspath('./iOS-iPhone/MusicGram/Build/MusicGram.app')
+        app = os.path.abspath('./iOS-iPhone/MusicGram/Build/MusicGram.ipa')
         cls.driver = webdriver.Remote(
             command_executor='http://127.0.0.1:4723/wd/hub',
             desired_capabilities={
                 'app': app,
                 'platformName': 'iOS',
                 'platformVersion': '10.0',
-                'deviceName': "iPhone Simulator",
+                #'deviceName': "iPhone Simulator",
+                'deviceName': "iPhone",
+                'udid': "87BFAAC4F3292E2C309AC65005D536E498763F82",
                 "noReset": "false",
                 "automationName": "xcuitest",
                 "appiumVersion": "1.6.1-beta"
