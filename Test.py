@@ -45,18 +45,9 @@ class Test:
     @allure.feature('Create Gram')
     @allure.story('Test Choose Track')
     def test_open_choose_track(cls):
-        cls.driver.find_element_by_xpath(cls.GRAMS_BTN_XPATH).click()
-        cls.driver.find_element_by_xpath(cls.CREATE_GRAM_BTN_XPATH).click()
-        
-        cls.driver.switch_to.alert.accept()
-        
-        assert cls.driver.find_element_by_xpath(cls.CHOOSE_TRACK_TITLE_XPATH).text == "CHOOSE TRACK"
-        assert cls.is_element_present(cls, cls.FAVORITES_TAB_XPATH)
-        assert cls.is_element_present(cls, cls.RECENT_TAB_XPATH)
-
-        screen = cls.driver.get_screenshot_as_png()
-        allure.attach('GChoose track sceen', screen, allure.attach_type.PNG)
-
+        cls.create_new_gram(cls)
+        cls.allow_access_to_library(cls)
+        cls.check_choose_track_screen(cls)
 
     def is_element_present(self, cls, element_xpath):
         try:
@@ -64,6 +55,36 @@ class Test:
             return True
         except NoSuchElementException:
             return False
+
+    def get_alert(self, cls):
+        try:
+            return cls.driver.switch_to_alert()            
+        except NoAlertPresentException:
+            return None
+
+    @allure.step("Create new gram")
+    def create_new_gram(self, cls):
+        cls.driver.find_element_by_xpath(cls.GRAMS_BTN_XPATH).click()
+        cls.driver.find_element_by_xpath(cls.CREATE_GRAM_BTN_XPATH).click()
+
+    @allure.step("Check alert and allow access to the library")
+    def allow_access_to_library(self, cls):
+        alert = cls.get_alert(cls)
+        assert alert is not None
+        
+        screen = cls.driver.get_screenshot_as_png()
+        allure.attach('Alert', screen, allure.attach_type.PNG)
+        
+        alert.accept()
+
+    @allure.step("Check Choose Track screen")
+    def check_choose_track_screen(self, cls):
+        assert cls.driver.find_element_by_xpath(cls.CHOOSE_TRACK_TITLE_XPATH).text == "CHOOSE TRACK"
+        assert cls.is_element_present(cls, cls.FAVORITES_TAB_XPATH)
+        assert cls.is_element_present(cls, cls.RECENT_TAB_XPATH)
+
+        screen = cls.driver.get_screenshot_as_png()
+        allure.attach('Choose track screen', screen, allure.attach_type.PNG)
 
 
     # @allure.step("Checking TBSP")
