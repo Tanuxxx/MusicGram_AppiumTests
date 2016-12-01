@@ -35,7 +35,7 @@ class Test:
                 'platformVersion': '10.0',
                 #'deviceName': "iPhone Simulator",
                 'deviceName': "iPhone",
-                'udid': "87BFAAC4F3292E2C309AC65005D536E498763F82",
+                'udid': "87bfaac4f3292e2c309ac65005d536e498763f82",
                 "noReset": "false",
                 "automationName": "xcuitest",
                 "appiumVersion": "1.6.1-beta"
