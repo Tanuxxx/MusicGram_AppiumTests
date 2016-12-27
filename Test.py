@@ -32,9 +32,10 @@ class Test:
             desired_capabilities={
                 'app': app,
                 'platformName': 'iOS',
-                'platformVersion': '10.0',
+                'platformVersion': '10.1',
                 #'deviceName': "iPhone Simulator",
-                'deviceName': "iPhone",
+                #'deviceName': "iPhone",
+                'deviceName': "iPhone 7 plus",
                 #'udid': "87bfaac4f3292e2c309ac65005d536e498763f82",
                 'udid': "26807fc791fe2a0e4f4e229a3b25852540da414c",
                 "noReset": "false",
