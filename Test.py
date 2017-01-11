@@ -32,12 +32,13 @@ class Test:
             desired_capabilities={
                 'app': app,
                 'platformName': 'iOS',
-                'platformVersion': '10.1',
+                'platformVersion': '9.3.2',
                 #'deviceName': "iPhone Simulator",
                 #'deviceName': "iPhone",
-                'deviceName': "iPhone 7 plus",
+                #'deviceName': "iPhone 7 plus",
+                'deviceName': "Provectus iPhone 6S",
                 #'udid': "87bfaac4f3292e2c309ac65005d536e498763f82",
-                'udid': "26807fc791fe2a0e4f4e229a3b25852540da414c",
+                'udid': "4a229109c6e0979665efc7f934fb743aaefb37a3",
                 "noReset": "false",
                 "automationName": "xcuitest",
                 "appiumVersion": "1.6.1-beta"
