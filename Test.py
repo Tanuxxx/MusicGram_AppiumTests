@@ -45,7 +45,7 @@ class Test:
                 #           'deviceName': 'iPhone 6'
             })
 
-        #cls.driver.implicitly_wait(300)
+        cls.driver.implicitly_wait(300)
         #cls.driver.switch_to.alert.accept()
 
     @allure.feature('Create Gram')
