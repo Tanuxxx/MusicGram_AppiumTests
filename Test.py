@@ -27,11 +27,12 @@ class Test:
     def setup(cls):
         #app = os.path.abspath('./Coffee Ratio/build/Debug-iphonesimulator/Coffee Ratio.app')
         #app = os.path.abspath('./iOS-iPhone/MusicGram/Build/MusicGram.app')
-        app = os.path.abspath('/Users/Shared/Jenkins/Home/workspace/MusicGram_Tool_iOS_For_Tests/iOS-iPhone/MusicGram/Build/MusicGram.ipa')
+        #app = os.path.abspath('/Users/Shared/Jenkins/Home/workspace/MusicGram_Tool_iOS_For_Tests/iOS-iPhone/MusicGram/Build/MusicGram.ipa')
         cls.driver = webdriver.Remote(
             command_executor='http://127.0.0.1:4723/wd/hub',
             desired_capabilities={
-                'app': app,
+                #'app': app,
+                'bundleId': 'com.provectus.MusicGram',
                 'platformName': 'iOS',
                 'platformVersion': '9.3.2',
                 #'deviceName': "iPhone Simulator",
