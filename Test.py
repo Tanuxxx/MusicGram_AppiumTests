@@ -43,7 +43,7 @@ class Test:
                 'udid': "4a229109c6e0979665efc7f934fb743aaefb37a3",
                 "noReset": "false",
                 "automationName": "xcuitest",
-                "appiumVersion": "1.6.1-beta",
+                "appiumVersion": "1.6.3",
                 "realDeviceLogger": "/Users/Shared/Jenkins/node_modules/ios-deviceconsole"
                 #           'deviceName': 'iPhone 6'
             })
