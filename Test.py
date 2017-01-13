@@ -46,7 +46,7 @@ class Test:
                 "noReset": "false",
                 "automationName": "xcuitest",
                 "appiumVersion": "1.6.3",
-                "realDeviceLogger": "/Users/Shared/Jenkins/node_modules/ios-deviceconsole"
+                "realDeviceLogger": "/Users/Shared/Jenkins/node_modules/ios-deviceconsole/deviceconsole"
                 #           'deviceName': 'iPhone 6'
             })
 
